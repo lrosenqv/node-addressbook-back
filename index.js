@@ -16,13 +16,12 @@ app.get('/addressBook', (req, res) => {
 });
 
 app.post('/addressBook', (req, res) => {
-  let collectedAdresses = getJsonContent("./adresses.json");
-  collectedAdresses.push({id: nanoid(), ...req.body})
+  let collectedAddresses = getJsonContent("./addresses.json");
+  collectedAddresses.push({id: nanoid(), ...req.body})
 
-  writeFileSync("./addresses.json", JSON.stringify(collectedAdresses))
+  writeFileSync("./addresses.json", JSON.stringify(collectedAddresses))
 
-  //res.json(collectedAdresses)
-  res.send(collectedAdresses)
+  res.json("Funkade")
 })
 
 function getJsonContent(url){
