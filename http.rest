@@ -1,0 +1,13 @@
+GET http://localhost:3000/addressBook
+
+###
+
+POST http://localhost:3000/addressBook
+Content-Type: application/json
+
+{
+  "id": "orHaVfJLovfimMASbyEYt",
+  "firstName": "Louise",
+  "lastName": "Test",
+  "email": "louise@test.com"
+}
